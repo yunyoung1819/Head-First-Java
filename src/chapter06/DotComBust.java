@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * 닷컴(.COM) 가라앉히기 게임 
  *  
  * DotComBust 클래스 
+ * 
  */
 public class DotComBust {
 	private GameHelper helper = new GameHelper();
@@ -13,7 +14,7 @@ public class DotComBust {
 	private int numOfGuesses = 0;
 	
 	private void setUpGame() {
-		// 우선 닷컴 객체 몇 개를 만들고 위치를 저장합니다. 
+		// 우선 닷컴 객체 몇 개를 만들고 위치를 지정합니다.
 		DotCom one = new DotCom();
 		one.setName("Pets.com");
 		DotCom two = new DotCom();
@@ -49,10 +50,10 @@ public class DotComBust {
 		
 		for (DotCom dotComToTest : dotComsList) {
 			result = dotComToTest.checkYourself(userGuess);
-			if (result.equals("hit")) {
+			if(result.equals("hit")) {
 				break;
 			}
-			if (result.equals("kill")) {
+			if(result.equals("kill")) {
 				dotComsList.remove(dotComToTest);
 				break;
 			}
@@ -63,7 +64,7 @@ public class DotComBust {
 	private void finishGame() {
 		System.out.println("All Dot Coms are dead! Your stock is now worthless.");
 		if (numOfGuesses <= 18) {
-			System.out.println("It only took you" + numOfGuesses + " guesses.");
+			System.out.println("It only took you " + numOfGuesses + " guesses.");
 			System.out.println("You got out before your option sank.");
 		} else {
 			System.out.println("Took you long enough." + numOfGuesses + " guesses.");
