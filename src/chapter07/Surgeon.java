@@ -1,4 +1,4 @@
-package chapter7;
+package chapter07;
 
 public class Surgeon extends Doctor {
 	
@@ -7,6 +7,7 @@ public class Surgeon extends Doctor {
 	}
 	
 	void makeIncision() {
-		// 살을 쨉니다 (헉!)
+		// 살을 쨉니다(헉!)
 	}
+
 }
