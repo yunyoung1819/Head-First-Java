@@ -7,6 +7,7 @@ package chapter07;
  *
  */
 public class Animal {
+	
 	private String picture;
 	private String food;
 	private int hunger;
