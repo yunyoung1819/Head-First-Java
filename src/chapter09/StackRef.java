@@ -12,6 +12,6 @@ public class StackRef {
 	}
 	
 	public void barf() {
-		Duck d = new Duck(24);
+		// Duck d = new Duck(24);
 	}
 }
