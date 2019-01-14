@@ -14,4 +14,8 @@ public class Duck {
 		
 		System.out.println("size is " + size);
 	}
+
+	public Duck() {
+		// TODO Auto-generated constructor stub
+	}
 }
