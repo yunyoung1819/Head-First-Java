@@ -4,5 +4,11 @@ Head First Java
 
 ### Contents 
 
-#### Chapter1. 껍질을 깨고
-- [[code]](https://github.com/yunyoung1819/Head-First-Java/tree/master/src/chapter01)
+- Chapter 1. 껍질을 깨고
+[[code]](https://github.com/yunyoung1819/Head-First-Java/tree/master/src/chapter01)
+
+- Chapter 2. 객체 마을로의 여행 
+[[code]](https://github.com/yunyoung1819/Head-First-Java/tree/master/src/chapter02)
+
+- Chapter 3. 네 변수르 알라 
+[[code]](https://github.com/yunyoung1819/Head-First-Java/tree/master/src/chapter03)
