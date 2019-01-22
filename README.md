@@ -1,6 +1,6 @@
 Head First Java
 ================================
-케이시 시에라, 버트 베이츠 저 
+케이시 시에라, 버트 베이츠 저 | 서환수 역 
 
 ### Code for Head First Java
 
@@ -58,5 +58,5 @@ Head First Java
 #### Chapter 18. 분산 컴퓨팅<br/>
 [[code]](https://github.com/yunyoung1819/Head-First-Java/tree/master/src/chapter18)
 
-#### Practice<br/>
+#### 연습문제 Practice<br/>
 [[code]](https://github.com/yunyoung1819/Head-First-Java/tree/master/src/practice)
