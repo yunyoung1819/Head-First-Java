@@ -11,9 +11,11 @@ public class TestFormats {
 		String s = String.format("%, d",1000000000);
 		String s1 = String.format("I have %.2f bugs to fix.", 476578.09876);
 		String s2 = String.format("I have %,.2f bugs to fix.", 476578.09876);
+		String s3 = String.format("I have %.2f, bugs tp fix.", 476578.09876);
 		
 		System.out.println(s);
 		System.out.println(s1);
 		System.out.println(s2);
+		System.out.println(s3);
 	}
 }
