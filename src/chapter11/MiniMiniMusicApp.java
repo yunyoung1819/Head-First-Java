@@ -22,13 +22,14 @@ public class MiniMiniMusicApp {
 	
 	public void play() {
 		try {
-			Sequencer player = MidiSystem.getSequencer();
+			Sequencer player = MidiSystem.getSequencer();	//Sequencer를 받아서 엽니다. 
 			player.open();
 			
 			Sequence seq = new Sequence(Sequence.PPQ, 4);
 			
-			Track track = seq.createTrack();
+			Track track = seq.createTrack();	// Sequence에 Track을 요청합니다. 
 			
+			// Track에 MidiEvent를 집어넣습니다. 
 			ShortMessage a = new ShortMessage();
 			a.setMessage(144, 1, 44, 100);
 			MidiEvent noteOn = new MidiEvent(a, 1);
@@ -39,9 +40,9 @@ public class MiniMiniMusicApp {
 			MidiEvent noteOff = new MidiEvent(b, 16);
 			track.add(noteOff);
 			
-			player.setSequence(seq);
+			player.setSequence(seq); // Sequencer에 Sequence를 보냅니다. 
 			
-			player.start();
+			player.start(); // Sequencer의 start() 메소드를 호출합니다. 
 			
 		} catch (Exception ex) {
 			ex.printStackTrace();
