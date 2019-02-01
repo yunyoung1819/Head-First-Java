@@ -11,7 +11,7 @@ import javax.sound.midi.Track;
  * 버전 2 : 명령행 인자를 써서 소리를 조절해봅시다.
  * 
  * 첫번째 인자 : 악기
- * 두번째 인자 : 
+ * 두번째 인자 : 음 
  *
  */
 public class MiniMusicCmdLine {
