@@ -44,7 +44,7 @@ public class SimpleAnimation {
 	class MyDrawPanel extends JPanel {
 		public void paintComponent(Graphics g) {
 			g.setColor(Color.green);
-			g.fillOval(x,y,40,40);
+			g.fillOval(x, y, 40, 40);
 		}
 	}
 }
