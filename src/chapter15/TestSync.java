@@ -15,7 +15,8 @@ class TestSync implements Runnable {
 		}
 	}
 	
-	public void increment() {
+	// 동기화 
+	public synchronized void increment() {
 		int i = balance;
 		balance = i + 1;
 	}
