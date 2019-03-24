@@ -39,30 +39,33 @@ public class SimpleChatClient {
 		incoming.setLineWrap(true);
 		incoming.setWrapStyleWord(true);
 		incoming.setEditable(false);
+		
 		JScrollPane qScroller = new JScrollPane(incoming);
 		qScroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		qScroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		
 		outgoing = new JTextField(20);
 		JButton sendButton = new JButton("Send");
 		sendButton.addActionListener(new SendButtonListener());
 		mainPanel.add(qScroller);
 		mainPanel.add(outgoing);
 		mainPanel.add(sendButton);
+		frame.getContentPane().add(BorderLayout.CENTER, mainPanel);
 		setUpNetworking();
 		
 		// 새로운 내부 클래스를 스레드의 Runnable(작업)로 하여 새로운 스레드를 시작합니다
 		// 이 스레드에서는 서버의 소켓 스트림으로부터 받은 데이터를 읽어서 그 메시지를 스크롤 텍스트 영역으로 표시합니
 		Thread readerThread = new Thread(new IncomingReader());
 		readerThread.start();
-		
-		frame.getContentPane().add(BorderLayout.CENTER, mainPanel);
-		frame.setSize(400, 500);
+	
+		frame.setSize(650, 500);
 		frame.setVisible(true);
 	}
 	
 	// 소켓을 이용하여 입력 스트림과 출력 스트림을 받아옵니다
 	// 출력 스트림은 서버로 메시지를 보내기 위한 용도로 쓰이고 있었고 새로 만든 readerThread에서 메시지를 받아오기 위한 용도로 입력 스트림을 사용
 	private void setUpNetworking() {
+		
 		try {
 			sock = new Socket("127.0.0.1", 5000);
 			InputStreamReader streamReader = new InputStreamReader(sock.getInputStream());
@@ -97,8 +100,8 @@ public class SimpleChatClient {
 		public void run() {
 			String message;
 			try {
-				while((message = reader.readLine()) != null) {
-					System.out.println("read " + message);
+				while ((message = reader.readLine()) != null) {
+					System.out.println("client read " + message);
 					incoming.append(message + "\n");
 				}
 			} catch(Exception ex) { ex.printStackTrace(); }

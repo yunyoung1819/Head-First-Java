@@ -58,7 +58,6 @@ public class VerySimpleChatServer {
 		} catch(Exception ex) { 
 			ex.printStackTrace();
 		}
-		
 	}
 	
 	public void tellEveryone(String message) {
